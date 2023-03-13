@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../utils/patterns.ts"],
+  "sourcesContent": ["export const videoPattern = /^(https?:\\/\\/)?(www\\.)?(m\\.|music\\.)?(youtube\\.com|youtu\\.?be)\\/.+$/;\nexport const playlistPattern = /^.*(list=)([^#\\&\\?]*).*/;\nexport const scRegex = /^https?:\\/\\/(soundcloud\\.com)\\/(.*)$/;\nexport const mobileScRegex = /^https?:\\/\\/(soundcloud\\.app\\.goo\\.gl)\\/(.*)$/;\nexport const isURL = /^https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)/;"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,eAAe;AACrB,MAAM,kBAAkB;AACxB,MAAM,UAAU;AAChB,MAAM,gBAAgB;AACtB,MAAM,QAAQ;",
+  "names": []
+}

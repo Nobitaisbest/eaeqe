@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../utils/queue.ts"],
+  "sourcesContent": ["import { GuildMember } from \"discord.js\";\n\nexport const canModifyQueue = (member: GuildMember) =>\n  member.voice.channelId === member.guild.members.me!.voice.channelId;\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEO,MAAM,iBAAiB,CAAC,WAC7B,OAAO,MAAM,cAAc,OAAO,MAAM,QAAQ,GAAI,MAAM;",
+  "names": []
+}

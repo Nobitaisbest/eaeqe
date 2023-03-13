@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../utils/config.ts"],
+  "sourcesContent": ["import \"dotenv/config\";\nimport { Config } from \"../interfaces/Config\";\n\nlet config: Config;\n\ntry {\n  config = require(\"../config.json\");\n} catch (error) {\n  config = {\n    TOKEN: process.env.TOKEN || \"\",\n    PREFIX: process.env.PREFIX || \"!\",\n    MAX_PLAYLIST_SIZE: parseInt(process.env.MAX_PLAYLIST_SIZE!) || 10,\n    PRUNING: process.env.PRUNING === \"true\" ? true : false,\n    STAY_TIME: parseInt(process.env.STAY_TIME!) || 30,\n    DEFAULT_VOLUME: parseInt(process.env.DEFAULT_VOLUME!) || 100,\n    LOCALE: process.env.LOCALE || \"en\"\n  };\n}\n\nexport { config };\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oBAAO;AAGP,IAAI;AAEJ,IAAI;AACF,WAAS,QAAQ,gBAAgB;AACnC,SAAS,OAAP;AACA,WAAS;AAAA,IACP,OAAO,QAAQ,IAAI,SAAS;AAAA,IAC5B,QAAQ,QAAQ,IAAI,UAAU;AAAA,IAC9B,mBAAmB,SAAS,QAAQ,IAAI,iBAAkB,KAAK;AAAA,IAC/D,SAAS,QAAQ,IAAI,YAAY,SAAS,OAAO;AAAA,IACjD,WAAW,SAAS,QAAQ,IAAI,SAAU,KAAK;AAAA,IAC/C,gBAAgB,SAAS,QAAQ,IAAI,cAAe,KAAK;AAAA,IACzD,QAAQ,QAAQ,IAAI,UAAU;AAAA,EAChC;AACF;",
+  "names": []
+}

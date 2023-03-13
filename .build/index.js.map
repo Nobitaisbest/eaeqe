@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.ts"],
+  "sourcesContent": ["import { Client, GatewayIntentBits } from \"discord.js\";\nimport { Bot } from \"./structs/Bot\";\n\nexport const bot = new Bot(\n  new Client({\n    intents: [\n      GatewayIntentBits.Guilds,\n      GatewayIntentBits.GuildVoiceStates,\n      GatewayIntentBits.GuildMessages,\n      GatewayIntentBits.GuildMessageReactions,\n      GatewayIntentBits.MessageContent,\n      GatewayIntentBits.DirectMessages\n    ]\n  })\n);\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,qBAA0C;AAC1C,iBAAoB;AAEb,MAAM,MAAM,IAAI;AAAA,EACrB,IAAI,sBAAO;AAAA,IACT,SAAS;AAAA,MACP,iCAAkB;AAAA,MAClB,iCAAkB;AAAA,MAClB,iCAAkB;AAAA,MAClB,iCAAkB;AAAA,MAClB,iCAAkB;AAAA,MAClB,iCAAkB;AAAA,IACpB;AAAA,EACF,CAAC;AACH;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../utils/checkPermissions.ts"],
+  "sourcesContent": ["import { ChatInputCommandInteraction, PermissionResolvable } from \"discord.js\";\nimport { Command } from \"../interfaces/Command\";\n\nexport interface PermissionResult {\n  result: boolean;\n  missing: string[];\n}\n\nexport async function checkPermissions(\n  command: Command,\n  interaction: ChatInputCommandInteraction\n): Promise<PermissionResult> {\n  const member = await interaction.guild!.members.fetch({ user: interaction.client.user!.id });\n  const requiredPermissions = command.permissions as PermissionResolvable[];\n\n  if (!command.permissions) return { result: true, missing: [] };\n\n  const missing = member.permissions.missing(requiredPermissions);\n\n  return { result: !Boolean(missing.length), missing };\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAQA,eAAsB,iBACpB,SACA,aAC2B;AAC3B,QAAM,SAAS,MAAM,YAAY,MAAO,QAAQ,MAAM,EAAE,MAAM,YAAY,OAAO,KAAM,GAAG,CAAC;AAC3F,QAAM,sBAAsB,QAAQ;AAEpC,MAAI,CAAC,QAAQ;AAAa,WAAO,EAAE,QAAQ,MAAM,SAAS,CAAC,EAAE;AAE7D,QAAM,UAAU,OAAO,YAAY,QAAQ,mBAAmB;AAE9D,SAAO,EAAE,QAAQ,CAAC,QAAQ,QAAQ,MAAM,GAAG,QAAQ;AACrD;",
+  "names": []
+}

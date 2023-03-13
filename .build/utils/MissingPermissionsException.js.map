@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../utils/MissingPermissionsException.ts"],
+  "sourcesContent": ["export class MissingPermissionsException {\n  public message = \"Missing permissions:\";\n\n  constructor(public permissions: string[]) {}\n\n  public toString() {\n    return `${this.message} ${this.permissions.join(\", \")}`;\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,4BAA4B;AAAA,EAGvC,YAAmB,aAAuB;AAAvB;AAAA,EAAwB;AAAA,EAFpC,UAAU;AAAA,EAIV,WAAW;AAChB,WAAO,GAAG,KAAK,WAAW,KAAK,YAAY,KAAK,IAAI;AAAA,EACtD;AACF;",
+  "names": []
+}

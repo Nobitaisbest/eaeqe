@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../commands/ping.ts"],
+  "sourcesContent": ["import { ChatInputCommandInteraction, SlashCommandBuilder } from \"discord.js\";\nimport { i18n } from \"../utils/i18n\";\n\nexport default {\n  data: new SlashCommandBuilder().setName(\"ping\").setDescription(i18n.__(\"ping.description\")),\n  cooldown: 10,\n  execute(interaction: ChatInputCommandInteraction) {\n    interaction\n      .reply({ content: i18n.__mf(\"ping.result\", { ping: Math.round(interaction.client.ws.ping) }), ephemeral: true })\n      .catch(console.error);\n  }\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,qBAAiE;AACjE,kBAAqB;AAErB,IAAO,eAAQ;AAAA,EACb,MAAM,IAAI,mCAAoB,EAAE,QAAQ,MAAM,EAAE,eAAe,iBAAK,GAAG,kBAAkB,CAAC;AAAA,EAC1F,UAAU;AAAA,EACV,QAAQ,aAA0C;AAChD,gBACG,MAAM,EAAE,SAAS,iBAAK,KAAK,eAAe,EAAE,MAAM,KAAK,MAAM,YAAY,OAAO,GAAG,IAAI,EAAE,CAAC,GAAG,WAAW,KAAK,CAAC,EAC9G,MAAM,QAAQ,KAAK;AAAA,EACxB;AACF;",
+  "names": []
+}

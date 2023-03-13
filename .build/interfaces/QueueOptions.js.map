@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../interfaces/QueueOptions.ts"],
+  "sourcesContent": ["import { VoiceConnection } from \"@discordjs/voice\";\nimport { CommandInteraction, TextChannel } from \"discord.js\";\n\nexport interface QueueOptions {\n  interaction: CommandInteraction;\n  textChannel: TextChannel;\n  connection: VoiceConnection;\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
+  "names": []
+}

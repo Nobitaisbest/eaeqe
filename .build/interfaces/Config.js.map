@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../interfaces/Config.ts"],
+  "sourcesContent": ["export interface Config {\n  TOKEN: string;\n  PREFIX: string;\n  MAX_PLAYLIST_SIZE: number;\n  PRUNING: boolean;\n  STAY_TIME: number;\n  DEFAULT_VOLUME: number;\n  LOCALE: string;\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
+  "names": []
+}

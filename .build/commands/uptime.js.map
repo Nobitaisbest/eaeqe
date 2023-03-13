@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../commands/uptime.ts"],
+  "sourcesContent": ["import { ChatInputCommandInteraction, SlashCommandBuilder } from \"discord.js\";\nimport { bot } from \"../index\";\nimport { i18n } from \"../utils/i18n\";\n\nexport default {\n  data: new SlashCommandBuilder().setName(\"uptime\").setDescription(i18n.__(\"uptime.description\")),\n  execute(interaction: ChatInputCommandInteraction) {\n    let seconds = Math.floor(bot.client.uptime! / 1000);\n    let minutes = Math.floor(seconds / 60);\n    let hours = Math.floor(minutes / 60);\n    let days = Math.floor(hours / 24);\n\n    seconds %= 60;\n    minutes %= 60;\n    hours %= 24;\n\n    return interaction\n      .reply({ content: i18n.__mf(\"uptime.result\", { days: days, hours: hours, minutes: minutes, seconds: seconds }) })\n      .catch(console.error);\n  }\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,qBAAiE;AACjE,eAAoB;AACpB,kBAAqB;AAErB,IAAO,iBAAQ;AAAA,EACb,MAAM,IAAI,mCAAoB,EAAE,QAAQ,QAAQ,EAAE,eAAe,iBAAK,GAAG,oBAAoB,CAAC;AAAA,EAC9F,QAAQ,aAA0C;AAChD,QAAI,UAAU,KAAK,MAAM,aAAI,OAAO,SAAU,GAAI;AAClD,QAAI,UAAU,KAAK,MAAM,UAAU,EAAE;AACrC,QAAI,QAAQ,KAAK,MAAM,UAAU,EAAE;AACnC,QAAI,OAAO,KAAK,MAAM,QAAQ,EAAE;AAEhC,eAAW;AACX,eAAW;AACX,aAAS;AAET,WAAO,YACJ,MAAM,EAAE,SAAS,iBAAK,KAAK,iBAAiB,EAAE,MAAY,OAAc,SAAkB,QAAiB,CAAC,EAAE,CAAC,EAC/G,MAAM,QAAQ,KAAK;AAAA,EACxB;AACF;",
+  "names": []
+}

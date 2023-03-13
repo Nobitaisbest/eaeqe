@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../interfaces/Command.ts"],
+  "sourcesContent": ["import { SlashCommandBuilder } from \"discord.js\";\n\nexport interface Command {\n  permissions?: string[];\n  cooldown?: number;\n  data: SlashCommandBuilder;\n  execute(...args: any): any;\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
+  "names": []
+}
